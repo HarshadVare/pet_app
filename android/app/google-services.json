@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "827181165046",
+    "firebase_url": "https://pet-app-487d5-default-rtdb.firebaseio.com",
+    "project_id": "pet-app-487d5",
+    "storage_bucket": "pet-app-487d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827181165046:android:6391028cae8f434ad57fd7",
+        "android_client_info": {
+          "package_name": "com.example.pet_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827181165046-ved16jo6upmkg73m9qv1unj1htndm23m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmNgApsyQge_fUA6Iyj8O3nHUzLKYIYNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827181165046-ved16jo6upmkg73m9qv1unj1htndm23m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "827181165046-it41od84hnb97p1tu9arbupgi6f1476n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.petApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
