@@ -37,14 +37,17 @@ class _AddPetScreenState extends State<AddPetScreen> {
     }
     _form.currentState!.save();
 
-    final bytes = io.File(_selecteImage!.path).readAsBytesSync();
-    String img64 = base64Encode(bytes);
+    List<int> imageBytes = await _selecteImage!.readAsBytes();
+
+    // Encode the image bytes to base64.
+    String base64Image = base64Encode(imageBytes);
 
     setState(() {
       _isSending = true;
     });
 
-    await data.savePet(_enteredName, _enteredBreed, _enteredDescription, img64);
+    await data.savePet(
+        _enteredName, _enteredBreed, _enteredDescription, base64Image);
     if (!context.mounted) {
       return;
     }
@@ -54,7 +57,7 @@ class _AddPetScreenState extends State<AddPetScreen> {
           name: _enteredName,
           breed: _enteredBreed,
           description: _enteredDescription,
-          imageUrl: img64),
+          imageUrl: base64Image),
     );
     setState(() {
       _isSending = false;

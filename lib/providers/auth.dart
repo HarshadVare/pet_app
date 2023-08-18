@@ -113,5 +113,6 @@ class Auth with ChangeNotifier {
     }
     final timeToExpiray = _expirayDate!.difference(DateTime.now()).inSeconds;
     _authTimer = Timer(Duration(seconds: timeToExpiray), logout);
+    //dio
   }
 }

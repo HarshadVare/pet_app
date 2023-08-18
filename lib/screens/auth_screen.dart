@@ -53,6 +53,7 @@ class _AuthScreenState extends State<AuthScreen> {
     try {
       if (_isLogin) {
         //log user in
+
         await Provider.of<Auth>(context, listen: false)
             .signin(_enteredEmail, _enteredPassword);
       } else {
@@ -140,7 +141,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           // textCapitalization: TextCapitalization.none,
                           validator: (value) {
                             if (value == null || value.trim().isEmpty) {
-                              return 'Please enter a valid email address.';
+                              return 'Please enter a name.';
                             }
                             return null;
                           },
@@ -158,7 +159,7 @@ class _AuthScreenState extends State<AuthScreen> {
                           // textCapitalization: TextCapitalization.none,
                           validator: (value) {
                             if (value == null || value.trim().isEmpty) {
-                              return 'Please enter a valid email address.';
+                              return 'Please enter a last name.';
                             }
                             return null;
                           },
@@ -221,7 +222,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               ),
                               child: Text(
                                 _isLogin ? 'Log in' : 'Sign up',
-                                style: TextStyle(fontSize: 18),
+                                style: const TextStyle(fontSize: 18),
                               ),
                             ),
                           ),

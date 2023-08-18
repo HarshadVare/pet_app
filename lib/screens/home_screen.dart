@@ -94,9 +94,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 )));
                       },
                       child: Image.memory(
+                        filterQuality: FilterQuality.high,
                         base64Decode(_pet[i].imageUrl),
-                        // width: 50,
-                        // height: 50,
+                        width: 50,
+                        height: 50,
                         fit: BoxFit.cover,
                       ),
                     )),
